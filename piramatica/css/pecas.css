@@ -1,0 +1,152 @@
+#mesa 
+{
+    width: 100%;
+    height: 100%;
+}
+
+.operator
+{
+    font-size:12px;
+}
+
+.signal
+{
+    color:#f00;
+}
+
+.mesa-peca 
+{
+    -webkit-perspective: 600;
+    width:100px;
+    height:50px;
+
+    position:absolute;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all 4.3s;
+    transition: all .3s;
+    background-position:center!important;
+    background-size:cover!important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.face 
+{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    -moz-transition-property: opacity, -moz-transform, -moz-box-shadow;
+    -moz-transition-duration: .3s;
+    -ms-transition-property: opacity, -ms-transform, -ms-box-shadow;
+    -ms-transition-duration: .3s;
+    -webkit-transition-property: opacity, -webkit-transform, -webkit-box-shadow;
+    -webkit-transition-duration: .3s;
+    transition-property: opacity, transform, box-shadow;
+    transition-duration: .3s;
+
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    background-position:center!important;
+    background-size:cover!important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.front
+{}
+
+.back 
+{
+    z-index: 10;
+}
+
+.mesa-peca:hover .face
+{
+    -webkit-box-shadow: 0 0 20px #aaa;
+    -moz-box-shadow: 0 0 20px #aaa;
+    -ms-box-shadow: 0 0 20px #aaa;
+    box-shadow: 0 0 10px #aaa;
+}
+
+.mesa-peca-selecionada .face
+{
+    -webkit-box-shadow: 0 0 20px #aaa;
+    -moz-box-shadow: 0 0 20px #aaa;
+    -ms-box-shadow: 0 0 20px #aaa;
+    box-shadow: 0 0 10px #aaa;		
+    width:120px;
+    height:70px;
+
+    margin-left:-10px;
+    margin-top:-10px;
+
+}
+
+.mesa-peca-selecionada .front
+{     
+    -moz-transform: rotate3d(0,1,0,180deg);
+    -ms-transform: rotate3d(0,1,0,180deg);
+    -webkit-transform: rotate3d(0,1,0,180deg);
+    transform: rotate3d(0,1,0,180deg);
+
+    width:130px;
+    height:80px;
+
+    margin-left:-15px;
+    margin-top:-15px;
+
+    z-index: 8;
+}
+
+.mesa-peca-selecionada .back
+{
+    -moz-transform: rotate3d(0,1,0,0deg);
+    -ms-transform: rotate3d(0,1,0,0deg);
+    -webkit-transform: rotate3d(0,1,0,0deg);
+    transform: rotate3d(0,1,0,0deg);
+
+    z-index: 10;
+}
+
+.mesa-peca-removida
+{
+    opacity: 0;
+}
+
+.peca_2_10  {background: url('../imgs/pecas/exp_01.png')}
+.peca_8_10  {background: url('../imgs/pecas/exp_02.png')}
+.peca_5_10  {background: url('../imgs/pecas/exp_03.png')}
+.peca_5_10_2  {background: url('../imgs/pecas/exp_04.png')}
+.peca_6_10  {background: url('../imgs/pecas/exp_05.png')}
+.peca_4_10  {background: url('../imgs/pecas/exp_06.png')}
+.peca_9_10  {background: url('../imgs/pecas/exp_07.png')}
+.peca_1_10  {background: url('../imgs/pecas/exp_08.png')}
+.peca_3_10  {background: url('../imgs/pecas/exp_09.png')}
+.peca_7_10  {background: url('../imgs/pecas/exp_10.png')}
+.peca_0_10 {background: url('../imgs/pecas/exp_11.png')}
+.peca_10_10  {background: url('../imgs/pecas/exp_12.png')}
+
+.peca_169_121  {background: url('../imgs/pecas/exp_13.png')}
+.peca_-48_121  {background: url('../imgs/pecas/exp_14.png')}
+.peca_56_121  {background: url('../imgs/pecas/exp_15.png')}
+.peca_65_121  {background: url('../imgs/pecas/exp_16.png')}
+.peca_40_121  {background: url('../imgs/pecas/exp_17.png')}
+.peca_81_121  {background: url('../imgs/pecas/exp_18.png')}
+
+.peca_30_49  {background: url('../imgs/pecas/exp_19.png')}
+.peca_19_49  {background: url('../imgs/pecas/exp_20.png')}
+.peca_70_49  {background: url('../imgs/pecas/exp_21.png')}
+.peca_-21_49  {background: url('../imgs/pecas/exp_22.png')}
+.peca_30_49_2  {background: url('../imgs/pecas/exp_23.png')}
+.peca_19_49_2 {background: url('../imgs/pecas/exp_24.png')}
+
+.peca_331_625  {background: url('../imgs/pecas/exp_25.png')}
+.peca_294_625  {background: url('../imgs/pecas/exp_26.png')}
+.peca_290_625  {background: url('../imgs/pecas/exp_27.png')}
+.peca_335_625  {background: url('../imgs/pecas/exp_28.png')}
