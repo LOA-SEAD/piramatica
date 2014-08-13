@@ -94,6 +94,15 @@ define(['jquery', 'modelos/piramatica', 'text!visualizacoes/layout.html', 'text!
                 piramatica.IniciarJogo(dificuldade);
                 return false;
             });
+
+            $('#mesa-dica')
+            .accessButton({
+                accessibleLabel: 'Dica'
+            })
+            .data('accessButton')
+            .clickOrActivate(function () {
+                piramatica.Dica();
+            });
 		
             $('#mesa-voltar')
             .accessButton({
@@ -124,7 +133,9 @@ define(['jquery', 'modelos/piramatica', 'text!visualizacoes/layout.html', 'text!
 		
             //	Inicia a pagina com fadeIn sobre o menu
             $('#camadaMenu').hide();
-            $('#camadaMenu').fadeIn(1000);
+            // $('#camadaMenu').fadeIn(1000);
+
+            $('#intro-jogar').click();
         }
         // fim do metodo configAmbiente
 

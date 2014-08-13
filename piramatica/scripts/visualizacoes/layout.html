@@ -7,31 +7,30 @@
             id="menu-sobre" class="botao" type="button">Sobre o projeto</button>
         </div>
 		
-        <center>
 		<div style="display: none;" id="camadaIntro" class="divBasica">
             <h1>Introdução</h1>
-            
-            
             <div class="clr" style="overflow:auto">
-            <div class="colLeft">
-                O objetivo do <b>PiraMática</b> é encontrar duas peças que, somadas, resultem em um dos números enunciados
-                pelo computador.
-                Mas cuidado! Você deve fazer isso antes que o tempo acabe!<br /><br />
-                Como você pode ver na imagem ao lado, esses números<br /> sempre são informados ao lado direito da tela,
-                na caixa "Somas restantes".<br />
-                Neste exemplo, os números informados são <b>625</b>, <b>10</b>, <b>49</b> e <b>121</b>!<br /><br />
-                Também é possível visualizar algumas regras matemáticas, apresentadas na caixa "Lembrete".</div>
-                <img src="piramatica/imgs/demos/d2.png" style="float:right" />    
-            </div><br />            
+                <div class="colLeft" style="margin:1em">
+                    O objetivo do <b>PiraMática</b> é encontrar duas peças que, somadas, resultem em um dos números enunciados
+                    pelo computador.
+                    Mas cuidado! Você deve fazer isso antes que o tempo acabe!<br /><br />
+                    Como você pode ver na imagem ao lado, esses números<br /> sempre são informados ao lado direito da tela,
+                    na caixa "Somas restantes".<br />
+                    Neste exemplo, os números informados são <b>625</b>, <b>10</b>, <b>49</b> e <b>121</b>!<br /><br />
+                    Também é possível visualizar algumas regras matemáticas, apresentadas na caixa "Lembrete".
+                </div>
+                <img src="piramatica/imgs/demos/d2.png" style="float:right" />
+            </div>
+            <br />            
             <div class="clr" style="overflow:auto">
                 <div class="colLeft">
-                Por exemplo, observe os valores à direita:<br />
-                Duas peças foram selecionadas:<br /><b>15 *2</b> e <b>(4 *5) +39</b>.<br /><br />
-                Desenvolvendo as expressões, verificamos que<br /><br />
-                = 15*2 + 4*5 + 39<br />
-                = 30 + 20 + 39<br />
-                = 89<br />
-                <b>89</b> é um número exibido pelo painel, logo as duas peças são retiradas!
+                    Por exemplo, observe os valores à direita:<br />
+                    Duas peças foram selecionadas:<br /><b>15 *2</b> e <b>(4 *5) +39</b>.<br /><br />
+                    Desenvolvendo as expressões, verificamos que<br /><br />
+                    = 15*2 + 4*5 + 39<br />
+                    = 30 + 20 + 39<br />
+                    = 89<br />
+                    <b>89</b> é um número exibido pelo painel, logo as duas peças são retiradas!
                 </div>
                 <div class="colRight">
                     <img src="piramatica/imgs/demos/d0.png" style="margin-bottom:5px" /><br />
@@ -43,20 +42,23 @@
             <div style="text-align:center">
                 <input type="radio" id="rad1" name="rad" /> <label for="rad1">Fácil</label> 
                 <input type="radio" id="rad2" name="rad" /> <label for="rad2">Médio</label> 
-                <input type="radio" id="rad3" name="rad" checked="checked" /> <label for="rad3">Insano</label><br /><br />
+                <input type="radio" id="rad3" name="rad" checked="checked" /> <label for="rad3">Insano</label>
+
+                <br /><br /><br /><br />
+                
                 <button id="intro-voltar" class="botao" type="button">Voltar</button><button
                 id="intro-jogar" class="botao" type="button">Vaaaaaaaai!</button>
             </div>
         </div>
-        </center>
         
         <div style="display: none;" id="camadaJogo">
         	<a href="#aTop" id="aTop"></a>
             
             <div id="div-mesa">
 	            <div id="mesa" class="divBasica"></div>
-
-                <button id="mesa-voltar" type="button" class="botao">Voltar</button>
+                    <button id="mesa-dica" type="button" class="botao">Dica</button>
+                    <button id="mesa-voltar" type="button" class="botao">Voltar</button>
+                                
                 <div id="div-mesa-pontos" class="divBasica">
                     <h1>Pontuação</h1>
                     <div id="mesa-pontos"></div>
@@ -94,11 +96,6 @@
                 
             </div>
 		</div>
-            
-            <!--<div class="awt-hidden-accessible">
-                <label for="campo-acessivel">Digite a letra desejada:</label>
-                <input id="campo-acessivel" type="text" />
-            </div>-->
         
         <div style="display: none;" id="camadaVitoria">
 			<img id="figura-vitoria" src="piramatica/imgs/vitoria.png" />
@@ -106,19 +103,14 @@
                 <h1>Pontuação</h1>
                 <div id="final-pontos"></div>
             </div>
-            <!--<figure id="figura-vitoria">
-                <figcaption class="awt-hidden-accessible">Parabéns pela vitória!</figcaption>
-            </figure>-->
 		</div>
+
         <div style="display: none;" id="camadaDerrota">
 			<img id="figura-derrota" src="piramatica/imgs/derrota.png" />
             <div id="div-derrota-pontos" class="divBasica">
                 <h1>Pontuação</h1>
                 <div id="final-pontos"></div>
             </div>
-            <!--<figure id="figura-derrota">
-                <figcaption class="awt-hidden-accessible">Você perdeu! Estude MAIS!</figcaption>
-            </figure>-->
         </div>
         <center>        
         	<div style="display: none;" id="camadaSobre" class="divBasica">

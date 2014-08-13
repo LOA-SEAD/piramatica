@@ -14,12 +14,13 @@
 }
 
 #titulo {
-    height:155px;
-    width:800px;
+    /*height:155px;
+    width:800px;*/
+    width:80%;
     margin-top:10%;
 }
 
-#camadaJogo {}
+#camadaJogo { }
 
 #div-mesa {
     float:left;
@@ -34,7 +35,7 @@
     padding:1%;
 }
 
-#mesa-peca {}
+#mesa-peca { }
 
 #painel {
     float:right;
@@ -47,8 +48,8 @@
 #painel-dica {}
 
 #camadaIntro {
-    width:50%;
-    min-width:500px;
+    /*width:50%;*/
+    /*min-width:500px;*/
     padding-left:10px;
     padding-right:10px;	
 }
@@ -100,10 +101,8 @@
 }
 
 .colLeft {
-    vertical-align:top;
-    width:45%;
+    width:50%;
     float:left;
-    text-align:right;
 }
 
 .colRight {
