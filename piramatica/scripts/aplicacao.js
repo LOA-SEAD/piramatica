@@ -20,7 +20,6 @@ define(['jquery', 'modelos/piramatica', 'text!visualizacoes/layout.html', 'text!
 	
         //	defini regras basicas de interacao usuario-jogo
         function configAmbiente() {
-
             //	Definindo acoes realizadas no evento 'click' do mouse sobre determinados elementos
             $("#menu-jogar")
             .accessButton({
@@ -133,9 +132,7 @@ define(['jquery', 'modelos/piramatica', 'text!visualizacoes/layout.html', 'text!
 		
             //	Inicia a pagina com fadeIn sobre o menu
             $('#camadaMenu').hide();
-            // $('#camadaMenu').fadeIn(1000);
-
-            $('#intro-jogar').click();
+            $('#camadaMenu').fadeIn(1000);
         }
         // fim do metodo configAmbiente
 
