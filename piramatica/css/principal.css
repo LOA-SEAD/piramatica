@@ -31,7 +31,7 @@
 
 #mesa {
     width:98%;
-    height:400px;
+    height:500px;
     padding:1%;
 }
 
@@ -78,6 +78,18 @@
 
 .divBasica {
     background:#fff;
+    border: 10px solid #eeeeee;
+    border-radius:2px;
+    padding:5px;
+    text-align:justify;
+    color:#444;
+    font-weight:bold;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.divBasica2 {
+    background:#f00;
     border: 10px solid #eeeeee;
     border-radius:2px;
     padding:5px;

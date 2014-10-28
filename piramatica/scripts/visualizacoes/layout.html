@@ -11,13 +11,20 @@
             <h1>Introdução</h1>
             <div class="clr" style="overflow:auto">
                 <div class="colLeft" style="margin:1em">
-                    O objetivo do <b>PiraMática</b> é encontrar duas peças que, somadas, resultem em um dos números enunciados
+                    O objetivo do <b>Piramática</b> é encontrar duas peças que, somadas, resultem em um dos números enunciados
                     pelo computador.
                     Mas cuidado! Você deve fazer isso antes que o tempo acabe!<br /><br />
                     Como você pode ver na imagem ao lado, esses números<br /> sempre são informados ao lado direito da tela,
                     na caixa "Somas restantes".<br />
-                    Neste exemplo, os números informados são <b>625</b>, <b>10</b>, <b>49</b> e <b>121</b>!<br /><br />
-                    Também é possível visualizar algumas regras matemáticas, apresentadas na caixa "Lembrete".
+                    Neste exemplo, os números informados são <b>49</b>, <b>10</b>, <b>30</b> e <b>20</b>!<br /><br />
+                    Também é possível visualizar algumas regras matemáticas, apresentadas na caixa "Lembrete".<br /><br />
+                    Abaixo do campo das peças, você encontra a caixa de "Pontuação". Para cada nível selecionado, você iniciará o jogo com um determinado número de pontos:<br /><br />
+                    5 pontos para o Nível <b>Café com Leite</b><br />
+                    7 pontos para o Nível <b>Tô na Média</b><br />
+                    12 pontos para o Nível <b>Ninja</b><br />
+                    15 pontos para o Nível <b>Insano</b><br /><br />
+                    Para cada par de peças selecionado corretamente, você ganha <b>3 pontos</b>, para cada erro cometido, você perde <b>4 pontos</b>, para espiar a "Cola", serão consumidos <b>5 pontos</b> e para cada nível concluído, você ganha <b>50 pontos</b> pela vitória mais <b>1 ponto </b> por segundo restante no cronômetro.<br /><br /><br />
+                    Ou seja, resolva o tabuleiro o mais rápido que puder!! O tempo está correndo...
                 </div>
                 <img src="piramatica/imgs/demos/d2.png" style="float:right" />
             </div>
@@ -25,12 +32,14 @@
             <div class="clr" style="overflow:auto">
                 <div class="colLeft">
                     Por exemplo, observe os valores à direita:<br />
-                    Duas peças foram selecionadas:<br /><b>15 *2</b> e <b>(4 *5) +39</b>.<br /><br />
-                    Desenvolvendo as expressões, verificamos que<br /><br />
-                    = 15*2 + 4*5 + 39<br />
-                    = 30 + 20 + 39<br />
-                    = 89<br />
-                    <b>89</b> é um número exibido pelo painel, logo as duas peças são retiradas!
+                    Duas peças foram selecionadas:<br /><b>√25</b> e <b>(-11x5)+60</b>.<br /><br />
+                    Desenvolvendo as expressões, verificamos que:<br /><br />
+                    = √25 + (-11x5) + 60<br />
+                    = 5 + (-11x5) + 60<br />
+					= 5 + (-55) + 60<br />
+					= 5 + 5<br />
+                    = 10<br /><br />
+                    <b>10</b> é um número exibido pelo painel, logo as duas peças são retiradas do tabuleiro quando selecionadas.
                 </div>
                 <div class="colRight">
                     <img src="piramatica/imgs/demos/d0.png" style="margin-bottom:5px" /><br />
@@ -38,11 +47,12 @@
                 </div>
             </div><br /><br /><br />
             
-            Tudo bem! Agora que você já conhece um pouco sobre o PiraMática, selecione uma dificuldade e tente jogar!<br /><br />
+            Tudo bem! Agora que você já conhece um pouco sobre o Piramática, selecione uma dificuldade e tente jogar:<br /><br />
             <div style="text-align:center">
-                <input type="radio" id="rad1" name="rad" /> <label for="rad1">Fácil</label> 
-                <input type="radio" id="rad2" name="rad" /> <label for="rad2">Médio</label> 
-                <input type="radio" id="rad3" name="rad" checked="checked" /> <label for="rad3">Insano</label>
+                <input type="radio" id="rad1" name="rad" checked="checked" /> <label for="rad1">Café com Leite</label> 
+                <input type="radio" id="rad2" name="rad" /> <label for="rad2">Tô na Média</label> 
+                <input type="radio" id="rad3" name="rad" /> <label for="rad3">Ninja</label> 
+                <input type="radio" id="rad4" name="rad" /> <label for="rad4">Insano</label>
 
                 <br /><br /><br /><br />
                 
@@ -56,7 +66,7 @@
             
             <div id="div-mesa">
 	            <div id="mesa" class="divBasica"></div>
-                    <button id="mesa-dica" type="button" class="botao">Dica</button>
+                    <button id="mesa-dica" type="button" class="botao">Cola</button>
                     <button id="mesa-voltar" type="button" class="botao">Voltar</button>
                                 
                 <div id="div-mesa-pontos" class="divBasica">
@@ -118,12 +128,15 @@
                  <div id="sobre-equipe">
                      <div class="colLeft">
                          Catarine Santana Ohnuma<br />
+                         Delano Beder<br />
                          Jessica Sayuri Nishiguchi<br />
                          Jheniffer Camila Pedro
                      </div>
                      <div class="colRight">
+                         Joice Otsuka<br />
                          Lucas Oliveira David<br />
-                         Marcos Vinicius Costa
+                         Marcos Vinicius Costa<br />
+                         Luiz Valério Neto
                      </div>
                  </div>
                  

@@ -1,11 +1,11 @@
 /* PIRAMATICA.JS
  *
  * Data de criacao: 13/11/2012 (Lucas)
- * Ultima modificacao: 19/11/2012 (Lucas)
+ * Ultima modificacao: 27/10/2014 (Valério)
  *
  * DESCRICAO: declaracao de metodos utilizados durante o jogo. Este arquivo
  * contem a descricao das regras aplicadas a este, como a verificacao se duas
- * cartas selecionadas sao pares.
+ * cartas selecionadas sao pares correspondentes.
  *
  * peca_{seu numero}_{o resultado da soma de seu numero com o numero de seu par}
  *
@@ -21,25 +21,28 @@ define(['./pecas'], function (GrupoPecas) {
     *   Edite-as a fim de alterar a dificuldade ou pontuacao atribuida a uma
     *   partida individual
     */
+    
     var CONST = {
         PONTUACAO: {
-            RESPOSTA_CORRETA: 5,
-            RESPOSTA_INCORRETA: -2,
+            RESPOSTA_CORRETA: 3,
+            RESPOSTA_INCORRETA: -4,
             DICA: -5,
             TEMPO_RESTANTE: 1,
 
             VITORIA: 50,
             DERROTA: 0,
 
-            JOG_FACIL: 0,
-            JOG_NORMAL: 10,
-            JOG_DIFICIL: 50
+            JOG_CAFE_LEITE: 5,
+            JOG_MEDIA: 7,
+            JOG_NINJA: 12,
+            JOG_INSANO: 15
         },
 
         TEMPO: {
-            FACIL: 60,
-            NORMAL: 120,
-            DIFICIL: 300
+            CAFE_LEITE: 200,
+            MEDIA: 300,
+            NINJA: 400,
+            INSANO: 500
         }
     }
     // PRONTO! PODE PARAR DE EDITAR A PARTIR DAQUI
@@ -129,20 +132,25 @@ define(['./pecas'], function (GrupoPecas) {
             return;
         }
 
-        if(pDificuldade == 'FACIL') {
-            pontuacao = CONST.PONTUACAO.JOG_FACIL;
-            tempoRestante = CONST.TEMPO.FACIL;
+        if(pDificuldade == 'CAFE_LEITE') {
+            pontuacao = CONST.PONTUACAO.JOG_CAFE_LEITE;
+            tempoRestante = CONST.TEMPO.CAFE_LEITE;
             GrupoPecas.NumPecas = 6;
         }
-        else if(pDificuldade == 'NORMAL') {
-            pontuacao = CONST.PONTUACAO.JOG_NORMAL;
-            tempoRestante = CONST.TEMPO.NORMAL;
+        else if(pDificuldade == 'MEDIA') {
+            pontuacao = CONST.PONTUACAO.JOG_MEDIA;
+            tempoRestante = CONST.TEMPO.MEDIA;
             GrupoPecas.NumPecas = 10;
         }
-        else {    //    pDificuldade == 'DIFICIL'
-            pontuacao = CONST.PONTUACAO.JOG_DIFICIL;
+        else if(pDificuldade == 'NINJA') {
+            pontuacao = CONST.PONTUACAO.JOG_NINJA;
+            tempoRestante = CONST.TEMPO.NINJA;
             GrupoPecas.NumPecas = 28;
-            tempoRestante = CONST.TEMPO.DIFICIL;
+        }
+        else {    //    pDificuldade == 'INSANO'
+            pontuacao = CONST.PONTUACAO.JOG_INSANO;
+            GrupoPecas.NumPecas = 36;
+            tempoRestante = CONST.TEMPO.INSANO;
         }
 
         while(GrupoPecas.Principal.pop());
@@ -179,9 +187,11 @@ define(['./pecas'], function (GrupoPecas) {
             //Alinha as pecas
 
             var tmpPosX = 10;
-            if(pDificuldade == 'NORMAL')
+            if(pDificuldade == 'NINJA')
+                tmpPosX = 10;
+            else if(pDificuldade == 'MEDIA')
                 tmpPosX = 100;
-            else if(pDificuldade == 'FACIL')
+            else if(pDificuldade == 'CAFE_LEITE')
                 tmpPosX = 100;
 
             $(this).css({
@@ -198,7 +208,7 @@ define(['./pecas'], function (GrupoPecas) {
             var pattern = GrupoPecas.Principal.pop();
 
             //Aplica o padrão
-            $(this).find(".back").addClass(pattern);
+            $(this).find(".formula").addClass(pattern);
 
             //Junto o padrão
             $(this).attr("data-pattern",pattern);
@@ -294,8 +304,16 @@ define(['./pecas'], function (GrupoPecas) {
         var resultado1 = parseInt($pecaA.split("_")[2]);
         var resultado2 = parseInt($pecaB.split("_")[2]);
 
-        if (soma1 +soma2 != resultado1 && soma1 +soma2 != resultado2)
+        if (soma1 +soma2 != resultado1 && soma1 +soma2 != resultado2){
             pecas.removeClass("mesa-peca-selecionada");
+            pontuacao += CONST.PONTUACAO.RESPOSTA_INCORRETA;
+
+            if (pontuacao < 0) {
+            PExibirDerrota();
+            return 1;
+        }
+
+        }
         else {
             pontuacao += CONST.PONTUACAO.RESPOSTA_CORRETA;
 

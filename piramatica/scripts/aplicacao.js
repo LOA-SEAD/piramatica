@@ -76,11 +76,12 @@ define(['jquery', 'modelos/piramatica', 'text!visualizacoes/layout.html', 'text!
             .data('accessButton')
             .clickOrActivate(function () {
                 // Verificando qual dificuldade foi escolhida atraves dos
-                // radioboxes. Padrao: FACIL
-                var dificuldade = 'FACIL';
-                if($('#rad1')[0].checked) dificuldade = 'FACIL';
-                if($('#rad2')[0].checked) dificuldade = 'NORMAL';
-                if($('#rad3')[0].checked) dificuldade = 'DIFICIL';
+                // radioboxes. Padrao: CAFE COM LEITE
+                var dificuldade = 'CAFE_LEITE';
+                if($('#rad1')[0].checked) dificuldade = 'CAFE_LEITE';
+                if($('#rad2')[0].checked) dificuldade = 'MEDIA';
+                if($('#rad3')[0].checked) dificuldade = 'NINJA';
+                if($('#rad4')[0].checked) dificuldade = 'INSANO';
 
                 $('#camadaIntro').hide();
                 $('#camadaJogo').fadeIn(300);
