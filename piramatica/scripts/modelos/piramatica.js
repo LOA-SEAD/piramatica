@@ -156,7 +156,7 @@ define(['./pecas'], function (GrupoPecas) {
             tempoRestante = CONST.TEMPO.INSANO;
             GrupoPecas.Principal = GrupoPecas.levels[3];
         }
-
+        debugger;
         /*
         while(GrupoPecas.Principal.pop());
 
