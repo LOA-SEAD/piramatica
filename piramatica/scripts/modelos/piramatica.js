@@ -118,8 +118,8 @@ define(['./pecas'], function (GrupoPecas) {
     }
 
     //GrupoPecas.Auxiliar: new Array(), // JAA ESTA AQUI! Vem de GrupoPecas do arquivo pecas.js
-    GrupoPecas.Principal = new Array();
-    GrupoPecas.JaInseridos = new Array();
+    GrupoPecas.Principal = [];
+    GrupoPecas.JaInseridos = [];
     GrupoPecas.NumPecas = 0;
 
     function PIniciarJogo(pDificuldade) {
@@ -136,23 +136,28 @@ define(['./pecas'], function (GrupoPecas) {
             pontuacao = CONST.PONTUACAO.JOG_CAFE_LEITE;
             tempoRestante = CONST.TEMPO.CAFE_LEITE;
             GrupoPecas.NumPecas = 6;
+            GrupoPecas.Principal = GrupoPecas.levels[0];
         }
         else if(pDificuldade == 'MEDIA') {
             pontuacao = CONST.PONTUACAO.JOG_MEDIA;
             tempoRestante = CONST.TEMPO.MEDIA;
             GrupoPecas.NumPecas = 10;
+            GrupoPecas.Principal = GrupoPecas.levels[1];
         }
         else if(pDificuldade == 'NINJA') {
             pontuacao = CONST.PONTUACAO.JOG_NINJA;
             tempoRestante = CONST.TEMPO.NINJA;
             GrupoPecas.NumPecas = 28;
+            GrupoPecas.Principal = GrupoPecas.levels[2];
         }
         else {    //    pDificuldade == 'INSANO'
             pontuacao = CONST.PONTUACAO.JOG_INSANO;
             GrupoPecas.NumPecas = 36;
             tempoRestante = CONST.TEMPO.INSANO;
+            GrupoPecas.Principal = GrupoPecas.levels[3];
         }
 
+        /*
         while(GrupoPecas.Principal.pop());
 
         for(ContPecas = 0; ContPecas < GrupoPecas.Auxiliar.length/2; ContPecas++) {
@@ -170,9 +175,10 @@ define(['./pecas'], function (GrupoPecas) {
             }
             else ContPecas--;
         }
-
+         */
         for(var i = 0; i < 100; i++)
             GrupoPecas.Principal.sort(PShuffle);
+
 
         //    NumPecas ee decrementado em um, pois ja existe um elemento mesa-peca inserido no template
         for(i = 0; i < GrupoPecas.NumPecas -1; i++)
