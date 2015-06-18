@@ -1,0 +1,134 @@
+/*	
+ *	PRINCIPAL.CSS
+ *	objetivo: descrever os elementos principais do jogo, como telas e textos
+ *	criacao: 03/10/2012 18:30
+*/
+
+#palco {
+    width: 95%;
+    clear:both;
+    text-align:center;
+}
+#camadaMenu {
+    text-align:center;
+}
+
+#titulo {
+    /*height:155px;
+    width:800px;*/
+    width:80%;
+    margin-top:10%;
+}
+
+#camadaJogo { }
+
+#div-mesa {
+    float:left;
+    width:70%;
+    clear:both;
+    overflow:visible;
+}
+
+#mesa {
+    width:98%;
+    height:500px;
+    padding:1%;
+}
+
+#mesa-peca { }
+
+#painel {
+    float:right;
+    min-width:150px;
+    width:20%;
+}
+#mesa-voltar {
+    float:right
+}
+#painel-dica {}
+
+#camadaIntro {
+    /*width:50%;*/
+    /*min-width:500px;*/
+    padding-left:10px;
+    padding-right:10px;	
+}
+
+#camadaVitoria, #camadaDerrota {
+    margin-top:5%;
+}
+
+#div-mesa-pontos {
+    width:200px;
+    float:left;
+}
+
+/* Oculta o elemento de usuários videntes, mantendo o mesmo visível para leitores de tela.*/
+*/* Parte dos plugins do jquery.accessWidgetToolkit. */
+.awt-hidden-accessible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.divBasica {
+    background:#fff;
+    border: 10px solid #eeeeee;
+    border-radius:2px;
+    padding:5px;
+    text-align:justify;
+    color:#444;
+    font-weight:bold;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.divBasica2 {
+    background:#f00;
+    border: 10px solid #eeeeee;
+    border-radius:2px;
+    padding:5px;
+    text-align:justify;
+    color:#444;
+    font-weight:bold;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+#camadaSobre {
+    width:700px;
+    text-align:center;
+    margin-top:10%;
+}
+
+#sobre-logos {
+    background: url(piramatica/imgs/logos.png);
+    width:600px;
+    height:88px;
+}
+
+.colLeft {
+    width:50%;
+    float:left;
+}
+
+.colRight {
+    text-align:left;
+    float:right;
+    width:45%;
+}
+
+#sobre-equipe {
+    overflow:auto;
+    clear:both;
+    width:100%;
+    margin-top:30px;
+    margin-bottom:30px;
+    font-size:15px;
+
+}
