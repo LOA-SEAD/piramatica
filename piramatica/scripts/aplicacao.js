@@ -10,14 +10,16 @@
  * +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  * 
  */
-define(['jquery', 'modelos/piramatica', 'text!visualizacoes/layout.html', 'text!visualizacoes/peca.html', './utils/audio', 'jquery.accessWidgetToolkit.AccessButton'],
-    function ($, piramatica, layout, pecas, audio) {
-        
+define(['jquery', 'modelos/piramatica', 'text!visualizacoes/layout.html', 'text!visualizacoes/peca.html',
+    'jquery.accessWidgetToolkit.AccessButton'],
+    function ($, piramatica, layout, pecas) {
+
         function criarLayout() {
             $('body').append(layout);
             configAmbiente();
         }
 	
+
         //	defini regras basicas de interacao usuario-jogo
         function configAmbiente() {
             //	Definindo acoes realizadas no evento 'click' do mouse sobre determinados elementos
